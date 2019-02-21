@@ -58,4 +58,14 @@ public class MunroCollectionTest {
         munroCollection.sortByHeightAscending();
         assertEquals(0, munroCollection.getIndexOfMunro(munro1));
     }
+
+    @Test
+    public void munrosCanBePutIntoDescendingNameOrder(){
+        munroCollection.addMunro(munro1);
+        munroCollection.addMunro(munro2);
+        munroCollection.addMunro(munro3);
+        munroCollection.sortByNameDescinding();
+        assertEquals(0, munroCollection.getIndexOfMunro(munro3));
+    }
+
 }

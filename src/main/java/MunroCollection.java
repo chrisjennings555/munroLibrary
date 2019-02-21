@@ -36,5 +36,13 @@ public class MunroCollection {
         munroCollection.sort(Comparator.comparing(Munro::getHeight));
     }
 
+    public void sortByNameDescinding() {
+        munroCollection.sort(Comparator.comparing(Munro::getName).reversed());
+    }
+
+    public void sortByNameAscending() {
+        munroCollection.sort(Comparator.comparing(Munro::getName));
+    }
+
 
 }

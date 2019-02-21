@@ -46,7 +46,6 @@ public class MunroCollection {
 
     public ArrayList getMunrosAboveSpecificHeight(int height){
         ArrayList filteredMunros = new ArrayList();
-
         for (Munro munro : munroCollection) {
             if (munro.getHeight() >= height) {
                 filteredMunros.add(munro);
@@ -57,9 +56,18 @@ public class MunroCollection {
 
     public ArrayList getMunrosBelowSpecificHeight(int height) {
         ArrayList filteredMunros = new ArrayList();
-
         for (Munro munro : munroCollection) {
             if (munro.getHeight() <= height) {
+                filteredMunros.add(munro);
+            }
+        }
+        return filteredMunros;
+    }
+
+    public ArrayList getMunrosOfSpecificHillType(String type) {
+        ArrayList filteredMunros = new ArrayList();
+        for (Munro munro : munroCollection) {
+            if (munro.getHillCategory().equals(type)) {
                 filteredMunros.add(munro);
             }
         }

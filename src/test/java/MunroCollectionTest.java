@@ -17,7 +17,7 @@ public class MunroCollectionTest {
 
         munroCollection = new MunroCollection();
         munro1 = new Munro("Ben Lomond", 500, "MUN", "NE123456");
-        munro2 = new Munro("Ben More", 600, "MUN", "SW654321");
+        munro2 = new Munro("Ben More", 600, "TOP", "SW654321");
         munro3 = new Munro("Ben Nevis", 900, "MUN", "NW123123");
 
     }
@@ -93,7 +93,25 @@ public class MunroCollectionTest {
         munroCollection.addMunro(munro1);
         ArrayList filteredMunros = munroCollection.getMunrosBelowSpecificHeight(550);
         assertEquals(1, filteredMunros.size());
-
     }
+
+    @Test
+    public void munrosCanBeFilteredByHillCategoryMUN(){
+        munroCollection.addMunro(munro3);
+        munroCollection.addMunro(munro2);
+        munroCollection.addMunro(munro1);
+        ArrayList filteredMunros = munroCollection.getMunrosOfSpecificHillType("MUN");
+        assertEquals(2, filteredMunros.size());
+    }
+
+    @Test
+    public void munrosCanBeFilteredByHillCategoryTOP(){
+        munroCollection.addMunro(munro3);
+        munroCollection.addMunro(munro2);
+        munroCollection.addMunro(munro1);
+        ArrayList filteredMunros = munroCollection.getMunrosOfSpecificHillType("TOP");
+        assertEquals(1, filteredMunros.size());
+    }
+
 
 }

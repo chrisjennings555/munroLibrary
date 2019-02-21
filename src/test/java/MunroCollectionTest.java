@@ -77,4 +77,13 @@ public class MunroCollectionTest {
         assertEquals(0, munroCollection.getIndexOfMunro(munro1));
     }
 
+    @Test
+    public void munrosCanBeFilteredByHeight(){
+        munroCollection.addMunro(munro3);
+        munroCollection.addMunro(munro2);
+        munroCollection.addMunro(munro1);
+        ArrayList filteredMunros = munroCollection.getMunrosAboveSpecificHeight(600);
+        assertEquals(2, filteredMunros.size());
+    }
+
 }

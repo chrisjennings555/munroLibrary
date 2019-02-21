@@ -44,5 +44,16 @@ public class MunroCollection {
         munroCollection.sort(Comparator.comparing(Munro::getName));
     }
 
+    public ArrayList getMunrosAboveSpecificHeight(int height){
+        ArrayList filteredMunros = new ArrayList();
+
+        for (Munro munro : munroCollection) {
+            if (munro.getHeight() >= height) {
+                filteredMunros.add(munro);
+            }
+        }
+        return filteredMunros;
+    }
+
 
 }

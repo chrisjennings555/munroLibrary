@@ -17,4 +17,9 @@ public class MunroTest {
     public void munroHasName(){
         assertEquals("Ben Lomond", munro.getName());
     }
+
+    @Test
+    public void munroHasHeight(){
+        assertEquals(500, munro.getHeight());
+    }
 }

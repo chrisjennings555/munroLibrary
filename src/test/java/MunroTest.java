@@ -22,4 +22,9 @@ public class MunroTest {
     public void munroHasHeight(){
         assertEquals(500, munro.getHeight());
     }
+
+    @Test
+    public void munroHasCategory(){
+        assertEquals("MUN", munro.getHillCategory());
+    }
 }

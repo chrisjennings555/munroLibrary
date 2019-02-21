@@ -40,4 +40,22 @@ public class MunroCollectionTest {
         munroCollection.addMunro(munro3);
         assertEquals(3, munroCollection.getSize());
     }
+
+    @Test
+    public void munrosCanBePutInDescendingHeightOrder(){
+        munroCollection.addMunro(munro1);
+        munroCollection.addMunro(munro2);
+        munroCollection.addMunro(munro3);
+        munroCollection.sortByHeightDescending();
+        assertEquals(0, munroCollection.getIndexOfMunro(munro3));
+    }
+
+    @Test
+    public void munrosCanBePutIntoAscendingHeightOrder(){
+        munroCollection.addMunro(munro3);
+        munroCollection.addMunro(munro2);
+        munroCollection.addMunro(munro1);
+        munroCollection.sortByHeightAscending();
+        assertEquals(0, munroCollection.getIndexOfMunro(munro1));
+    }
 }

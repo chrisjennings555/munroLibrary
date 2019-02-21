@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class MunroCollection {
 
@@ -23,4 +23,18 @@ public class MunroCollection {
     public void addMunro(Munro munro) {
         munroCollection.add(munro);
     }
+
+    public int getIndexOfMunro(Munro munro) {
+        return munroCollection.indexOf(munro);
+    }
+
+    public void sortByHeightDescending() {
+        munroCollection.sort(Comparator.comparing(Munro::getHeight).reversed());
+    }
+
+    public void sortByHeightAscending() {
+        munroCollection.sort(Comparator.comparing(Munro::getHeight));
+    }
+
+
 }

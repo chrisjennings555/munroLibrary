@@ -26,4 +26,10 @@ public class MunroCollectionTest {
     public void collectionStartsWithZero(){
         assertEquals(0, munroCollection.getSize());
     }
+
+    @Test
+    public void munroCanBeAddedToTheCollection(){
+        munroCollection.addMunro(munro1);
+        assertEquals(1, munroCollection.getSize());
+    }
 }

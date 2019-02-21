@@ -19,4 +19,8 @@ public class MunroCollection {
     public int getSize() {
         return munroCollection.size();
     }
+
+    public void addMunro(Munro munro) {
+        munroCollection.add(munro);
+    }
 }

@@ -64,6 +64,16 @@ public class MunroCollection {
         return filteredMunros;
     }
 
+    public ArrayList getMunrosWithinSpecificHeightRange(int minHeight, int maxHeight) {
+        ArrayList filteredMunros = new ArrayList();
+        for (Munro munro : munroCollection){
+            if (munro.getHeight() >= minHeight && munro.getHeight() <= maxHeight) {
+                filteredMunros.add(munro);
+            }
+        }
+        return filteredMunros;
+    }
+
     public ArrayList getMunrosOfSpecificHillType(String type) {
         ArrayList filteredMunros = new ArrayList();
         for (Munro munro : munroCollection) {

@@ -96,6 +96,15 @@ public class MunroCollectionTest {
     }
 
     @Test
+    public void munrosCanBeFilteredWithinHeightRange(){
+        munroCollection.addMunro(munro3);
+        munroCollection.addMunro(munro2);
+        munroCollection.addMunro(munro1);
+        ArrayList filteredMunros = munroCollection.getMunrosWithinSpecificHeightRange(550, 650);
+        assertEquals(1, filteredMunros.size());
+    }
+
+    @Test
     public void munrosCanBeFilteredByHillCategoryMUN(){
         munroCollection.addMunro(munro3);
         munroCollection.addMunro(munro2);

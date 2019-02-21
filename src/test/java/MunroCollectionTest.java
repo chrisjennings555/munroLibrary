@@ -32,4 +32,12 @@ public class MunroCollectionTest {
         munroCollection.addMunro(munro1);
         assertEquals(1, munroCollection.getSize());
     }
+
+    @Test
+    public void manyMunrosCanBeAddedToTheCollection(){
+        munroCollection.addMunro(munro1);
+        munroCollection.addMunro(munro2);
+        munroCollection.addMunro(munro3);
+        assertEquals(3, munroCollection.getSize());
+    }
 }

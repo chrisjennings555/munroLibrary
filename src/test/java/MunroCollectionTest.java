@@ -78,12 +78,22 @@ public class MunroCollectionTest {
     }
 
     @Test
-    public void munrosCanBeFilteredByHeight(){
+    public void munrosCanBeFilteredByMinimumSpecifiedHeight(){
         munroCollection.addMunro(munro3);
         munroCollection.addMunro(munro2);
         munroCollection.addMunro(munro1);
         ArrayList filteredMunros = munroCollection.getMunrosAboveSpecificHeight(600);
         assertEquals(2, filteredMunros.size());
+    }
+
+    @Test
+    public void munrosCanBeFilteredByMaximumSpecificHeight(){
+        munroCollection.addMunro(munro3);
+        munroCollection.addMunro(munro2);
+        munroCollection.addMunro(munro1);
+        ArrayList filteredMunros = munroCollection.getMunrosBelowSpecificHeight(550);
+        assertEquals(1, filteredMunros.size());
+
     }
 
 }

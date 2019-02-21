@@ -27,4 +27,9 @@ public class MunroTest {
     public void munroHasCategory(){
         assertEquals("MUN", munro.getHillCategory());
     }
+
+    @Test
+    public void munroHasGridReference(){
+        assertEquals("NE123456", munro.getGridReference());
+    }
 }
